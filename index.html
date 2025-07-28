@@ -1,51 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body class="font-[Space_Grotesk] text-[18px] w-full max-w-md mx-auto">
+    <div class="header h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25">
+      <div
+        class="card-back bg-center bg-cover h-40 w-auto bg-[url(/images/bg-card-back.png)] mr-6 ml-14 max-w-2xs min-w-2xs"
+      >
+        <p id="cvc-output" class="text-gray-50 relative left-55 top-18 text-[10px] tracking-[2px]">000</p>
+      </div>
+      <div
+        class="card-front relative bg-center bg-cover h-40 w-auto bg-[url(/images/bg-card-front.png)] max-w-2xs min-w-2xs -top-16 left-4"
+      >
+        <img src="images/card-logo.svg" alt="logo from the credit card" class="p-5 h-[75px]" />
+        <div class="card-info flex flex-col">
+          <div class="flex justify-center">
+            <p id="card-number-output" class="text-gray-200 text-[1.2rem] tracking-[2px]">0000 0000 0000 0000</p>
+          </div>
+          <div class="flex justify-between w-[85%] mx-auto mt-5">
+            <p id="cardholder-output" class="text-[10px] text-gray-200 uppercase tracking-[1px]">John Doe</p>
+            <p id="expire-date-output" class="text-[10px] text-gray-200">00/00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form" class="w-[90%] mx-auto flex flex-col">
+      <label for="cardholder" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950"
+        >Cardholder Name</label
+      >
+      <input
+        type="text"
+        id="cardholder-input"
+        placeholder="e.g. John Doe"
+        class="rounded-md border border-gray-400 p-2 mt-2 mb-4"
+      />
+      <label for="card-number" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950"
+        >Card Number</label
+      >
+      <input
+        type="number"
+        id="-card-number-input"
+        placeholder="e.g. 1234 5678 9123 0000"
+        class="rounded-md border border-gray-400 p-2 mt-2 mb-4"
+      />
+      <div class="flex flex-row gap-3">
+        <label for="exp-mm" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">Exp. Date</label>
+        <label for="exp-yy" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">(MM/YY)</label>
+        <label for="cvc" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">cvc</label>
+      </div>
+      <div class="flex flex-row gap-3">
+        <input
+          type="number"
+          id="exp-mm"
+          placeholder="MM"
+          class="rounded-md border border-gray-400 w-[30%] p-2 mt-2 mb-4"
+        />
+        <input
+          type="number"
+          id="exp-yy"
+          placeholder="YY"
+          class="rounded-md border border-gray-400 w-[30%] p-2 mt-2 mb-4"
+        />
+        <input
+          type="number"
+          id="cvc"
+          placeholder="e.g. 123"
+          class="rounded-md border border-gray-400 w-full p-2 mt-2 mb-4"
+        />
+      </div>
+      <button type="button" id="confirm" class="w-full bg-black rounded-md text-gray-200 text-[1.1rem] p-4 mt-3 mb-10">
+        Confirm
+      </button>
+    </div>
+    <script src="assets/script/main.js"></script>
+  </body>
 </html>
