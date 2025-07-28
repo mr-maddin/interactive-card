@@ -15,8 +15,8 @@
 
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
-  <body class="font-[Space_Grotesk] text-[18px] w-full max-w-md mx-auto">
-    <div class="header h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25">
+  <body class="font-[Space_Grotesk] text-[18px] w-full mx-auto">
+    <div class="header w-full h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25">
       <div
         class="card-back bg-center bg-cover h-40 w-auto bg-[url(/images/bg-card-back.png)] mr-6 ml-14 max-w-2xs min-w-2xs"
       >
@@ -46,15 +46,17 @@
         id="cardholder-input"
         placeholder="e.g. John Doe"
         class="rounded-md border border-gray-400 p-2 mt-2 mb-4"
+        required
       />
       <label for="card-number" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950"
         >Card Number</label
       >
       <input
         type="number"
-        id="-card-number-input"
+        id="card-number-input"
         placeholder="e.g. 1234 5678 9123 0000"
         class="rounded-md border border-gray-400 p-2 mt-2 mb-4"
+        required
       />
       <div class="flex flex-row gap-3">
         <label for="exp-mm" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">Exp. Date</label>
@@ -67,21 +69,29 @@
           id="exp-mm"
           placeholder="MM"
           class="rounded-md border border-gray-400 w-[30%] p-2 mt-2 mb-4"
+          required
         />
         <input
           type="number"
           id="exp-yy"
           placeholder="YY"
           class="rounded-md border border-gray-400 w-[30%] p-2 mt-2 mb-4"
+          required
         />
         <input
           type="number"
           id="cvc"
           placeholder="e.g. 123"
           class="rounded-md border border-gray-400 w-full p-2 mt-2 mb-4"
+          required
         />
       </div>
-      <button type="button" id="confirm" class="w-full bg-black rounded-md text-gray-200 text-[1.1rem] p-4 mt-3 mb-10">
+      <button
+        type="button"
+        onclick="confirm()"
+        id="confirm"
+        class="w-full bg-black rounded-md text-gray-200 text-[1.1rem] p-4 mt-3 mb-10"
+      >
         Confirm
       </button>
     </div>
