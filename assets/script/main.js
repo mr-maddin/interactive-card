@@ -18,17 +18,20 @@ nameInput.addEventListener("input", function () {
 });
 
 cardInput.addEventListener("input", function () {
-  cardOutput.textContent = cardInput.value || "0000 0000 0000 0000";
+  let rawValue = cardInput.value.replace(/\D/g, "").substring(0, 16);
+  let formattedValue = rawValue.replace(/(.{4})/g, "$1 ").trim();
+  cardInput.value = formattedValue;
+  cardOutput.textContent = formattedValue || "0000 0000 0000 0000";
 });
 
 expDateInputMM.addEventListener("input", function () {
-  expDateOutput.textContent = expDateInputMM.value || "00" + "/" + expDateInputYY.value || "00";
+  expDateOutput.textContent = (expDateInputMM.value || "00") + "/" + (expDateInputYY.value || "00");
 });
 
 expDateInputYY.addEventListener("input", function () {
-  expDateOutput.textContent = expDateInputMM.value || "00" + "/" + expDateInputYY.value || "00";
+  expDateOutput.textContent = (expDateInputMM.value || "00") + "/" + (expDateInputYY.value || "00");
 });
 
 cvcInput.addEventListener("input", function () {
-  cvcOutput.textContent = cvcInput.value | "000";
+  cvcOutput.textContent = cvcInput.value || "000";
 });
