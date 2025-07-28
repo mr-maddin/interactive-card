@@ -16,19 +16,19 @@
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body class="font-[Space_Grotesk] text-[18px] w-full mx-auto">
-    <div class="header w-full h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25">
+    <div class="header w-full h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25 mx-auto">
       <div
-        class="card-back bg-center bg-cover h-40 w-auto bg-[url(/images/bg-card-back.png)] mr-6 ml-14 max-w-2xs min-w-2xs"
+        class="card-back bg-center bg-cover h-43 w-auto bg-[url(/images/bg-card-back.png)] max-w-2xs min-w-2xs ml-30 rounded-lg"
       >
-        <p id="cvc-output" class="text-gray-50 relative left-55 top-18 text-[10px] tracking-[2px]">000</p>
+        <p id="cvc-output" class="text-gray-50 relative left-57 top-19 text-[10px] tracking-[2px]">000</p>
       </div>
       <div
-        class="card-front relative bg-center bg-cover h-40 w-auto bg-[url(/images/bg-card-front.png)] max-w-2xs min-w-2xs -top-16 left-4"
+        class="card-front bg-cover h-43 w-auto bg-[url(/images/bg-card-front.png)] bg-cover max-w-2xs min-w-2xs -mt-15 ml-20 rounded-lg"
       >
         <img src="images/card-logo.svg" alt="logo from the credit card" class="p-5 h-[75px]" />
         <div class="card-info flex flex-col">
           <div class="flex justify-center">
-            <p id="cardnumber-output" class="text-gray-200 text-[1.2rem] tracking-[2px]">0000 0000 0000 0000</p>
+            <p id="cardnumber-output" class="text-gray-200 text-[1.2rem] tracking-[2px] mt-3">0000 0000 0000 0000</p>
           </div>
           <div class="flex justify-between w-[85%] mx-auto mt-5">
             <p id="cardholder-output" class="text-[10px] text-gray-200 uppercase tracking-[1.5px]">John Doe</p>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div id="form" class="w-[90%] mx-auto flex flex-col">
+    <div id="form" class="w-[90%] mx-auto flex flex-col max-w-md">
       <label for="cardholder" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950"
         >Cardholder Name</label
       >
@@ -93,7 +93,7 @@
         type="button"
         onclick="confirm()"
         id="confirm"
-        class="w-full bg-black rounded-md text-gray-200 text-[1.1rem] p-4 mt-3 mb-10"
+        class="w-full bg-black rounded-md text-gray-200 text-[1.1rem] p-4 mt-3 mb-10 cursor-pointer transition-colors transition-transform transition duration-500 ease-in-out hover:bg-purple-950 hover:scale-102"
       >
         Confirm
       </button>
