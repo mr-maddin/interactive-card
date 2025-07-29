@@ -21,12 +21,12 @@
     >
       <div class="flex flex-col items-center lg:flex-col-reverse lg:gap-10">
         <div
-          class="card-back bg-center bg-cover h-43 w-auto bg-[url(/images/bg-card-back.png)] max-w-2xs min-w-2xs rounded-lg lg:-mr-[100%]"
+          class="card-back shadow-xl/20 bg-center bg-cover h-43 w-auto bg-[url(/images/bg-card-back.png)] max-w-2xs min-w-2xs rounded-lg lg:-mr-[100%]"
         >
           <p id="cvc-output" class="text-gray-50 relative left-57 top-19 text-[10px] tracking-[2px]">000</p>
         </div>
         <div
-          class="card-front bg-cover h-43 w-auto bg-[url(/images/bg-card-front.png)] bg-cover max-w-2xs min-w-2xs -mt-20 mr-20 rounded-lg lg:-mr-[50%]"
+          class="card-front shadow-xl/20 bg-cover h-43 w-auto bg-[url(/images/bg-card-front.png)] bg-cover max-w-2xs min-w-2xs -mt-20 mr-20 rounded-lg lg:-mr-[50%]"
         >
           <img src="images/card-logo.svg" alt="logo from the credit card" class="p-5 h-[75px]" />
           <div class="card-info flex flex-col">
@@ -63,8 +63,12 @@
         required
       />
       <div class="flex flex-row gap-3">
-        <label for="exp-mm" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">Exp. Date</label>
-        <label for="exp-yy" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">(MM/YY)</label>
+        <label for="exp-mm" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950 lg:mr-4"
+          >Exp. Date</label
+        >
+        <label for="exp-yy" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950 lg:mr-6"
+          >(MM/YY)</label
+        >
         <label for="cvc" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">cvc</label>
       </div>
       <div class="flex flex-row gap-3">
