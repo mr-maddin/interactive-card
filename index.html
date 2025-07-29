@@ -15,24 +15,28 @@
 
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
-  <body class="font-[Space_Grotesk] text-[18px] w-full mx-auto">
-    <div class="header w-full h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25 mx-auto">
-      <div
-        class="card-back bg-center bg-cover h-43 w-auto bg-[url(/images/bg-card-back.png)] max-w-2xs min-w-2xs ml-30 rounded-lg"
-      >
-        <p id="cvc-output" class="text-gray-50 relative left-57 top-19 text-[10px] tracking-[2px]">000</p>
-      </div>
-      <div
-        class="card-front bg-cover h-43 w-auto bg-[url(/images/bg-card-front.png)] bg-cover max-w-2xs min-w-2xs -mt-15 ml-20 rounded-lg"
-      >
-        <img src="images/card-logo.svg" alt="logo from the credit card" class="p-5 h-[75px]" />
-        <div class="card-info flex flex-col">
-          <div class="flex justify-center">
-            <p id="cardnumber-output" class="text-gray-200 text-[1.2rem] tracking-[2px] mt-3">0000 0000 0000 0000</p>
-          </div>
-          <div class="flex justify-between w-[85%] mx-auto mt-5">
-            <p id="cardholder-output" class="text-[10px] text-gray-200 uppercase tracking-[1.5px]">John Doe</p>
-            <p id="expire-date-output" class="text-[10px] text-gray-200 tracking-[2px]">00/00</p>
+  <body class="font-[Space_Grotesk] text-[18px] w-full lg:flex lg:flex-row lg:items-center lg:gap-30">
+    <div
+      class="w-full h-64 bg-[url(/images/bg-main-mobile.png)] bg-no-repeat bg-cover pt-10 mb-25 lg:bg-[url(/images/bg-main-desktop.png)] lg:w-[35%] lg:pt-0 lg:mb-0 lg:h-screen lg:flex lg:items-center lg:justify-end"
+    >
+      <div class="flex flex-col items-center lg:flex-col-reverse lg:gap-10">
+        <div
+          class="card-back bg-center bg-cover h-43 w-auto bg-[url(/images/bg-card-back.png)] max-w-2xs min-w-2xs rounded-lg lg:-mr-[100%]"
+        >
+          <p id="cvc-output" class="text-gray-50 relative left-57 top-19 text-[10px] tracking-[2px]">000</p>
+        </div>
+        <div
+          class="card-front bg-cover h-43 w-auto bg-[url(/images/bg-card-front.png)] bg-cover max-w-2xs min-w-2xs -mt-20 mr-20 rounded-lg lg:-mr-[50%]"
+        >
+          <img src="images/card-logo.svg" alt="logo from the credit card" class="p-5 h-[75px]" />
+          <div class="card-info flex flex-col">
+            <div class="flex justify-center">
+              <p id="cardnumber-output" class="text-gray-200 text-[1.2rem] tracking-[2px] mt-3">0000 0000 0000 0000</p>
+            </div>
+            <div class="flex justify-between w-[85%] mx-auto mt-5">
+              <p id="cardholder-output" class="text-[10px] text-gray-200 uppercase tracking-[1.5px]">John Doe</p>
+              <p id="expire-date-output" class="text-[10px] text-gray-200 tracking-[2px]">00/00</p>
+            </div>
           </div>
         </div>
       </div>
