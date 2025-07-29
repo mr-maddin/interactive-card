@@ -13,6 +13,12 @@ let expDateOutput = document.getElementById("expire-date-output");
 let cvcInput = document.getElementById("cvc-input");
 let cvcOutput = document.getElementById("cvc-output");
 
+let validateName = document.getElementById("validateName");
+let validateNumber = document.getElementById("validateNumber");
+let validateExpMM = document.getElementById("validateExpMM");
+let validateExpYY = document.getElementById("validateExpYY");
+let validateCvc = document.getElementById("validateCvc");
+
 nameInput.addEventListener("input", function () {
   nameOutput.textContent = nameInput.value || "John Doe";
 });
@@ -35,3 +41,11 @@ expDateInputYY.addEventListener("input", function () {
 cvcInput.addEventListener("input", function () {
   cvcOutput.textContent = cvcInput.value || "000";
 });
+
+function validate() {
+  if (nameInput.value.length < 5) {
+    validateName.textContent = "Bitte einen gültigen Namen eingeben!";
+  } else {
+    validateName.textContent = "";
+  }
+}
