@@ -43,9 +43,36 @@ cvcInput.addEventListener("input", function () {
 });
 
 function validate() {
+  //NAME
   if (nameInput.value.length < 5) {
-    validateName.textContent = "Bitte einen gültigen Namen eingeben!";
+    validateName.textContent = "Please insert a valid Name";
   } else {
     validateName.textContent = "";
+  }
+  //CARD NUMBER
+  const cardNumberRaw = cardInput.value.replace(/\s/g, "");
+  if (!/^\d{16}$/.test(cardNumberRaw)) {
+    validateNumber.textContent = "Please insert a valid Card-Number 16-digits";
+  } else {
+    validateNumber.textContent = "";
+  }
+  //MONTH
+  const mm = parseInt(expDateInputMM.value, 10);
+  if (isNaN(mm) || mm < 1 || mm > 12) {
+    validateExpMM.textContent = "Please insert a number between 01 and 12";
+  } else {
+    validateExpMM.textContent = "";
+  }
+  //YEAR
+  if (expDateInputYY.value.trim() === "") {
+    validateExpYY.textContent = "Please insert a year-number";
+  } else {
+    validateExpYY.textContent = "";
+  }
+  //CVC
+  if (!/^\d{3}$/.test(cardOutput.value)) {
+    validateCvc.textContent = "Please Insert a 3-digit CVC Number";
+  } else {
+    validateCvc.textContent = "";
   }
 }
