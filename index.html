@@ -65,45 +65,45 @@
       />
       <p id="validateNumber" class="text-[14px] text-red-500 -mt-4 mb-3"></p>
       <div class="flex flex-row gap-3">
-        <label for="exp-mm" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950 lg:mr-4"
-          >Exp. Date</label
-        >
-        <label for="exp-yy" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950 lg:mr-6"
-          >(MM/YY)</label
-        >
-        <label for="cvc" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">cvc</label>
+        <label for="exp-mm" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">Exp. Date</label>
+        <label for="exp-yy" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950">(MM/YY)</label>
+        <label for="cvc" class="uppercase text-[0.8rem] tracking-[1px] ml-22 font-bold text-purple-950">cvc</label>
       </div>
       <div class="flex flex-row gap-3">
-        <input
-          type="text"
-          id="exp-mm"
-          placeholder="MM"
-          class="rounded-md border border-gray-400 w-[30%] p-2 mt-2 mb-4"
-          maxlength="2"
-          required
-        />
-
-        <input
-          type="text"
-          id="exp-yy"
-          placeholder="YY"
-          class="rounded-md border border-gray-400 w-[30%] p-2 mt-2 mb-4"
-          maxlength="2"
-          required
-        />
-
-        <input
-          type="text"
-          id="cvc-input"
-          placeholder="e.g. 123"
-          class="rounded-md border border-gray-400 w-full p-2 mt-2 mb-4"
-          maxlength="3"
-          required
-        />
-        <div class="block">
+        <div class="w-[25%]">
+          <input
+            type="text"
+            id="exp-mm"
+            placeholder="MM"
+            class="rounded-md border border-gray-400 w-full p-2 mt-2 mb-4"
+            maxlength="2"
+            required
+          />
           <p id="validateExpMM" class="text-[14px] text-red-500 -mt-4 mb-3"></p>
+        </div>
+
+        <div class="w-[25%]">
+          <input
+            type="text"
+            id="exp-yy"
+            placeholder="YY"
+            class="rounded-md border border-gray-400 w-full p-2 mt-2 mb-4"
+            maxlength="2"
+            required
+          />
           <p id="validateExpYY" class="text-[14px] text-red-500 -mt-4 mb-3"></p>
-          <p id="validateCvc" class="text-[14px] text-red-500 -mt-4 mb-3"></p>
+        </div>
+
+        <div class="w-[50%]">
+          <input
+            type="text"
+            id="cvc-input"
+            placeholder="e.g. 123"
+            class="rounded-md border border-gray-400 w-full p-2 mt-2 mb-4"
+            maxlength="3"
+            required
+          />
+          <p id="validateCvc" class="text-[14px] w-full text-red-500 -mt-4 mb-3"></p>
         </div>
       </div>
       <button
