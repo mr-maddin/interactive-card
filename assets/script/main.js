@@ -70,7 +70,7 @@ function validate() {
     validateExpYY.textContent = "";
   }
   //CVC
-  if (!/^\d{3}$/.test(cardOutput.value)) {
+  if (!/^\d{3}$/.test(cvcInput.value)) {
     validateCvc.textContent = "Enter a valid CVC Number";
   } else {
     validateCvc.textContent = "";
