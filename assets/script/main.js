@@ -75,4 +75,32 @@ function validate() {
   } else {
     validateCvc.textContent = "";
   }
+
+  const allValid =
+    validateName.textContent === "" &&
+    validateNumber.textContent === "" &&
+    validateExpMM.textContent === "" &&
+    validateExpYY.textContent === "" &&
+    validateCvc.textContent === "";
+
+  if (allValid) {
+    document.getElementById("form").classList.add("hidden");
+    document.getElementById("thankYou").classList.remove("hidden");
+  }
 }
+
+document.getElementById("continue").addEventListener("click", function () {
+  document.getElementById("thankYou").classList.add("hidden");
+  document.getElementById("form").classList.remove("hidden");
+
+  nameInput.value = "";
+  cardInput.value = "";
+  expDateInputMM.value = "";
+  expDateInputYY.value = "";
+  cvcInput.value = "";
+
+  nameOutput.textContent = "John Doe";
+  cardOutput.textContent = "0000 0000 0000 0000";
+  expDateOutput.textContent = "00/00";
+  cvcOutput.textContent = "000";
+});

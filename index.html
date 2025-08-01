@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <div id="form" class="w-[90%] mx-auto flex flex-col max-w-md hidden">
+    <div id="form" class="w-[90%] mx-auto flex flex-col max-w-md">
       <label for="cardholder" class="uppercase text-[0.8rem] tracking-[1px] font-bold text-purple-950"
         >Cardholder Name</label
       >
@@ -114,9 +114,17 @@
         Confirm
       </button>
     </div>
-    <div class="w-[90%] mx-auto flex-col max-w-md border items-center">
+    <div id="thankYou" class="w-[90%] mx-auto flex flex-col max-w-md items-center hidden">
       <img src="images/icon-complete.svg" alt="complete Icon" class="w-[80px]" />
       <h2 class="text-purple-950 text-3xl uppercase tracking-[3px] mt-10">Thank you!</h2>
+      <h3 class="text-gray-300 text-xl mt-5">We've added your card details</h3>
+      <button
+        type="button"
+        id="continue"
+        class="w-full bg-black rounded-md text-gray-200 text-[1.1rem] p-4 mt-20 mb-10 cursor-pointer transition-colors transition-transform transition duration-500 ease-in-out hover:bg-purple-950 hover:scale-102"
+      >
+        Continue
+      </button>
     </div>
     <script src="assets/script/main.js"></script>
   </body>
