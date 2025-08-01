@@ -60,7 +60,7 @@ Das Ziel dieser Übung war es, ein interaktives Formular für Kreditkartendaten 
 
 ## 📦 Installation
 
-git clone https://github.com/dein-benutzername/card-details-form.git
+git clone https://github.com/mr-maddin/interactive-card.git
 
 ---
 
